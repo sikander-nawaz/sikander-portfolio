@@ -66,18 +66,39 @@ const projects = [
 
 const ProjectsSection = () => {
     return (
-        <section id="projects" className="py-16 sm:py-24 bg-dark-900">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-6xl font-extrabold">
-                        My <span className="text-primary-500">Projects</span>
-                    </h1>
-                    <p className="mt-4 text-lg md:text-xl text-dark-600 max-w-3xl mx-auto">
+        <section id="projects" className="relative overflow-hidden py-16 sm:py-24 bg-[#DCE7E1]">
+            <div className="absolute inset-0 pointer-events-none">
+                <div
+                    className="absolute -top-40 left-1/2 h-[560px] w-[560px] -translate-x-1/2 rounded-full blur-3xl opacity-30"
+                    style={{ background: 'radial-gradient(circle at 30% 30%, rgba(31,38,42,0.14), transparent 65%)' }}
+                />
+                <div
+                    className="absolute -bottom-56 -left-44 h-[560px] w-[560px] rounded-full blur-3xl opacity-25"
+                    style={{ background: 'radial-gradient(circle at 50% 50%, rgba(31,38,42,0.10), transparent 70%)' }}
+                />
+                <div
+                    className="absolute inset-0 opacity-20"
+                    style={{
+                        backgroundImage:
+                            'linear-gradient(to right, rgba(31,38,42,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(31,38,42,0.08) 1px, transparent 1px)',
+                        backgroundSize: '72px 72px',
+                        maskImage: 'radial-gradient(circle at 50% 20%, black 0%, transparent 60%)',
+                        WebkitMaskImage: 'radial-gradient(circle at 50% 20%, black 0%, transparent 60%)',
+                    }}
+                />
+            </div>
+
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-12 sm:mb-16">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#1F262A]">
+                        My <span className="text-[#1F262A]/70">Projects</span>
+                    </h2>
+                    <p className="mt-4 text-base sm:text-lg text-[#1F262A]/70 max-w-3xl mx-auto">
                         A collection of my work, from full-stack applications to AI-powered tools.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {projects.map((project, index) => (
                         <ProjectCard
                             key={index}

@@ -5,20 +5,20 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    title: 'Fatima Arshad - Full Stack Developer & Trainer',
+    title: 'Sikander Nawaz - Full Stack Developer & Trainer',
     description: 'Professional portfolio of a Full Stack Developer with 3+ years of experience in web and app development, international hackathon participant, and coding instructor.',
     keywords: 'Full Stack Developer, Web Development, App Development, React, Next.js, Node.js, Trainer, Portfolio',
-    authors: [{ name: 'Fatima Arshad' }],
-    creator: 'Fatima Arshad',
+    authors: [{ name: 'Sikander Nawaz' }],
+    creator: 'Sikander Nawaz',
     openGraph: {
         title: 'Portfolio - Full Stack Developer & Trainer',
         description: 'Professional portfolio showcasing web and app development expertise',
         type: 'website',
     },
     icons: {
-        icon: '/assets/logo_black.png',
-        shortcut: '/assets/logo_black.png',
-        apple: '/assets/logo_black.png',
+        icon: '/assets/sn-mark.svg',
+        shortcut: '/assets/sn-mark.svg',
+        apple: '/assets/sn-mark.svg',
     },
 }
 

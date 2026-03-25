@@ -103,132 +103,209 @@ const VolunteerCertificatesSection = () => {
     const [openCert, setOpenCert] = useState<number | null>(0);
 
     return (
-        <section id="volunteer-certificates" className="py-16 sm:py-24 bg-dark-800/50">
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-8">
-                    <h2 className="text-3xl md:text-4xl font-extrabold">
-                        Volunteer Work & <span className="text-primary-400">Certificates</span>
+        <section id="volunteer-certificates" className="relative overflow-hidden py-16 sm:py-24 bg-[#DCE7E1]">
+            <div className="absolute inset-0 pointer-events-none">
+                <div
+                    className="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full blur-3xl opacity-30"
+                    style={{ background: 'radial-gradient(circle at 30% 30%, rgba(31,38,42,0.14), transparent 65%)' }}
+                />
+
+                <div
+                    className="absolute -bottom-48 -left-32 h-[520px] w-[520px] rounded-full blur-3xl opacity-25"
+                    style={{ background: 'radial-gradient(circle at 50% 50%, rgba(31,38,42,0.10), transparent 70%)' }}
+                />
+            </div>
+
+            <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-10">
+                    <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#1F262A]">
+                         Work & <span className="text-[#1F262A]/70">Certificates</span>
                     </h2>
-                    <p className="mt-4 text-lg text-dark-600">Giving back and continuous learning.</p>
+                    <p className="mt-4 text-base sm:text-lg text-[#1F262A]/70">Giving back and continuous learning.</p>
                 </div>
-                {/* Tabs */}
-                <div className="flex justify-center mb-8 gap-4">
-                    <button
-                        className={`px-6 py-2 rounded-t-lg font-semibold transition-colors duration-200 focus:outline-none ${activeTab === 'volunteer' ? 'bg-primary-400 text-white' : 'bg-dark-700 text-dark-400 hover:bg-dark-600'}`}
-                        onClick={() => setActiveTab('volunteer')}
-                    >
-                        Volunteer Experience
-                    </button>
-                    <button
-                        className={`px-6 py-2 rounded-t-lg font-semibold transition-colors duration-200 focus:outline-none ${activeTab === 'certificates' ? 'bg-primary-400 text-white' : 'bg-dark-700 text-dark-400 hover:bg-dark-600'}`}
-                        onClick={() => setActiveTab('certificates')}
-                    >
-                        Certificates
-                    </button>
-                </div>
-                {/* Tab Content */}
-                <div className="bg-dark-900 rounded-b-xl shadow-lg p-6">
-                    {activeTab === 'volunteer' && (
-                        <div className="w-full max-w-3xl mx-auto">
-                            <h3 className="text-2xl font-bold text-primary-400 mb-6 text-center">Volunteer Work</h3>
-                            <div className="relative border-l-2 border-primary-400 pl-4 mx-auto" style={{ maxWidth: '100%' }}>
-                                {volunteerWork.map((item, idx) => (
-                                    <div key={idx} className="mb-4">
-                                        <div className="flex items-center cursor-pointer" onClick={() => setOpenVolunteer(openVolunteer === idx ? null : idx)}>
-                                            <div className="w-4 h-4 bg-primary-400 rounded-full mr-4 border-2 border-dark-800 z-10" />
-                                            <div className="flex-1">
-                                                <span className="font-semibold text-dark-500">{item.role}</span> @ <span className="text-primary-400">{item.organization}</span>
-                                                <span className="block text-dark-600 font-mono text-xs">{item.date}</span>
-                                            </div>
-                                            <span className="ml-2 text-primary-400">
-                                                {openVolunteer === idx ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                                            </span>
-                                        </div>
-                                        {openVolunteer === idx && (
-                                            <motion.ul
-                                                initial={{ opacity: 0, y: -10 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                transition={{ duration: 0.3 }}
-                                                className="mt-2 ml-8 space-y-2"
-                                            >
-                                                {item.certificateLink && (
-                                                    <li className="mb-2">
-                                                        <a href={item.certificateLink} target="_blank" rel="noopener noreferrer" className="text-primary-400 underline hover:text-primary-300 transition-colors text-sm font-semibold">
-                                                            View Certificate
-                                                        </a>
-                                                    </li>
-                                                )}
-                                                {item.projectLink && (
-                                                    <li className="mb-2">
-                                                        <a href={item.projectLink} target="_blank" rel="noopener noreferrer" className="text-primary-400 underline hover:text-primary-300 transition-colors text-sm font-semibold">
-                                                            View Project
-                                                        </a>
-                                                    </li>
-                                                )}
-                                                {item.highlights.map((h, i) => (
-                                                    <li key={i} className="flex items-start gap-2">
-                                                        <span className="text-primary-500 mt-1 flex-shrink-0"><ArrowRight size={16} /></span>
-                                                        <span className="text-dark-600">{h}</span>
-                                                    </li>
-                                                ))}
-                                            </motion.ul>
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
+
+                <div className="mx-auto w-full max-w-2xl">
+                    <div className="flex items-center justify-center">
+                        <div className="inline-flex rounded-full border border-black/10 bg-white/60 p-1 shadow-sm shadow-black/10 backdrop-blur">
+                            <button
+                                className={`px-4 sm:px-5 py-2 rounded-full text-sm font-semibold transition-colors duration-200 focus:outline-none ${activeTab === 'volunteer' ? 'bg-[#1F262A] text-white' : 'text-[#1F262A]/70 hover:text-[#1F262A]'}`}
+                                onClick={() => setActiveTab('volunteer')}
+                            >
+                                Work
+                            </button>
+                            <button
+                                className={`px-4 sm:px-5 py-2 rounded-full text-sm font-semibold transition-colors duration-200 focus:outline-none ${activeTab === 'certificates' ? 'bg-[#1F262A] text-white' : 'text-[#1F262A]/70 hover:text-[#1F262A]'}`}
+                                onClick={() => setActiveTab('certificates')}
+                            >
+                                Certificates
+                            </button>
                         </div>
-                    )}
-                    {activeTab === 'certificates' && (
-                        <div className="w-full max-w-3xl mx-auto">
-                            <h3 className="text-2xl font-bold text-primary-400 mb-6 text-center">Certificates</h3>
-                            <div className="relative border-l-2 border-primary-400 pl-4 mx-auto" style={{ maxWidth: '100%' }}>
-                                {certificates.map((cert, idx) => (
-                                    <div key={idx} className="mb-4">
-                                        <div className="flex items-center cursor-pointer" onClick={() => setOpenCert(openCert === idx ? null : idx)}>
-                                            <div className="w-4 h-4 bg-primary-400 rounded-full mr-4 border-2 border-dark-800 z-10" />
-                                            <div className="flex-1">
-                                                <span className="font-semibold text-dark-500">{cert.title}</span>
-                                                <span className="block text-dark-600 font-mono text-xs">{cert.issuer} &mdash; {cert.date}</span>
-                                            </div>
-                                            <span className="ml-2 text-primary-400">
-                                                {openCert === idx ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                                            </span>
-                                        </div>
-                                        {openCert === idx && (
-                                            <motion.div
-                                                initial={{ opacity: 0, y: -10 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                transition={{ duration: 0.3 }}
-                                                className="mt-2 ml-8"
+                    </div>
+
+                    <div className="mt-8 space-y-4">
+                        {activeTab === 'volunteer' && (
+                            <div className="space-y-4">
+                                {volunteerWork.map((item, idx) => {
+                                    const isOpen = openVolunteer === idx
+                                    return (
+                                        <div
+                                            key={idx}
+                                            className="rounded-2xl border border-black/10 bg-white/55 backdrop-blur shadow-sm shadow-black/10"
+                                        >
+                                            <button
+                                                type="button"
+                                                className="w-full px-5 py-4 flex items-start gap-4 text-left"
+                                                onClick={() => setOpenVolunteer(isOpen ? null : idx)}
                                             >
-                                                {cert.links && Array.isArray(cert.links) && (
-                                                    <div className="mb-2 flex flex-wrap gap-3">
-                                                        {cert.links.map((link, i) => (
-                                                            <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="text-primary-400 underline hover:text-primary-300 transition-colors text-sm font-semibold">
-                                                                {link.label}
-                                                            </a>
-                                                        ))}
+                                                <div className="mt-1 h-10 w-10 rounded-2xl border border-black/10 bg-white/70 grid place-items-center text-[#1F262A] font-extrabold">
+                                                    {item.organization.slice(0, 1)}
+                                                </div>
+                                                <div className="flex-1 min-w-0">
+                                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                                                        <div className="font-semibold text-[#1F262A] truncate">
+                                                            {item.role}
+                                                        </div>
+                                                        <div className="text-xs font-mono text-[#1F262A]/55">
+                                                            {item.date}
+                                                        </div>
                                                     </div>
-                                                )}
-                                                <ul className="space-y-2 mt-2">
-                                                    {cert.highlights && cert.highlights.map((h, i) => (
-                                                        <li key={i} className="flex items-start gap-2">
-                                                            <span className="text-primary-500 mt-1 flex-shrink-0"><ArrowRight size={16} /></span>
-                                                            <span className="text-dark-600">{h}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </motion.div>
-                                        )}
-                                    </div>
-                                ))}
+                                                    <div className="mt-1 text-sm text-[#1F262A]/70 truncate">
+                                                        {item.organization} • {item.location}
+                                                    </div>
+                                                </div>
+                                                <div className="mt-1 text-[#1F262A]/70">
+                                                    {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                                                </div>
+                                            </button>
+
+                                            {isOpen && (
+                                                <motion.div
+                                                    initial={{ opacity: 0, y: -8 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    transition={{ duration: 0.25 }}
+                                                    className="px-5 pb-5"
+                                                >
+                                                    <div className="flex flex-wrap gap-3 mb-4">
+                                                        {item.certificateLink && (
+                                                            <a
+                                                                href={item.certificateLink}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1.5 text-sm font-semibold text-[#1F262A] hover:bg-white/85 transition-colors"
+                                                            >
+                                                                View Certificate <ArrowRight size={16} />
+                                                            </a>
+                                                        )}
+                                                        {item.projectLink && (
+                                                            <a
+                                                                href={item.projectLink}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1.5 text-sm font-semibold text-[#1F262A] hover:bg-white/85 transition-colors"
+                                                            >
+                                                                View Project <ArrowRight size={16} />
+                                                            </a>
+                                                        )}
+                                                    </div>
+
+                                                    <ul className="space-y-2">
+                                                        {item.highlights.map((h, i) => (
+                                                            <li key={i} className="flex items-start gap-2 text-[#1F262A]/70">
+                                                                <span className="mt-1 flex-shrink-0 text-[#1F262A]/70">
+                                                                    <ArrowRight size={16} />
+                                                                </span>
+                                                                <span>{h}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </motion.div>
+                                            )}
+                                        </div>
+                                    )
+                                })}
                             </div>
-                        </div>
-                    )}
+                        )}
+
+                        {activeTab === 'certificates' && (
+                            <div className="space-y-4">
+                                {certificates.map((cert, idx) => {
+                                    const isOpen = openCert === idx
+                                    return (
+                                        <div
+                                            key={idx}
+                                            className="rounded-2xl border border-black/10 bg-white/55 backdrop-blur shadow-sm shadow-black/10"
+                                        >
+                                            <button
+                                                type="button"
+                                                className="w-full px-5 py-4 flex items-start gap-4 text-left"
+                                                onClick={() => setOpenCert(isOpen ? null : idx)}
+                                            >
+                                                <div className="mt-1 h-10 w-10 rounded-2xl border border-black/10 bg-white/70 grid place-items-center text-[#1F262A] font-extrabold">
+                                                    C
+                                                </div>
+                                                <div className="flex-1 min-w-0">
+                                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                                                        <div className="font-semibold text-[#1F262A] truncate">
+                                                            {cert.title}
+                                                        </div>
+                                                        <div className="text-xs font-mono text-[#1F262A]/55">
+                                                            {cert.date}
+                                                        </div>
+                                                    </div>
+                                                    <div className="mt-1 text-sm text-[#1F262A]/70 truncate">
+                                                        {cert.issuer}
+                                                    </div>
+                                                </div>
+                                                <div className="mt-1 text-[#1F262A]/70">
+                                                    {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                                                </div>
+                                            </button>
+
+                                            {isOpen && (
+                                                <motion.div
+                                                    initial={{ opacity: 0, y: -8 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    transition={{ duration: 0.25 }}
+                                                    className="px-5 pb-5"
+                                                >
+                                                    {cert.links && Array.isArray(cert.links) && (
+                                                        <div className="flex flex-wrap gap-3 mb-4">
+                                                            {cert.links.map((link, i) => (
+                                                                <a
+                                                                    key={i}
+                                                                    href={link.url}
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1.5 text-sm font-semibold text-[#1F262A] hover:bg-white/85 transition-colors"
+                                                                >
+                                                                    {link.label} <ArrowRight size={16} />
+                                                                </a>
+                                                            ))}
+                                                        </div>
+                                                    )}
+
+                                                    <ul className="space-y-2">
+                                                        {cert.highlights && cert.highlights.map((h, i) => (
+                                                            <li key={i} className="flex items-start gap-2 text-[#1F262A]/70">
+                                                                <span className="mt-1 flex-shrink-0 text-[#1F262A]/70">
+                                                                    <ArrowRight size={16} />
+                                                                </span>
+                                                                <span>{h}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </motion.div>
+                                            )}
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         </section>
     );
 };
 
-export default VolunteerCertificatesSection; 
+export default VolunteerCertificatesSection;
