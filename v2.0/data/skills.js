@@ -1,0 +1,68 @@
+export const skillCategories = [
+  {
+    id: 1,
+    label: "Languages",
+    icon: "{ }",
+    skills: ["C++", "Python", "JavaScript ES6+"],
+  },
+  {
+    id: 2,
+    label: "Frontend",
+    icon: "◈",
+    skills: [
+      "React JS",
+      "Next JS 14",
+      "HTML5",
+      "CSS3",
+      "SCSS / SASS",
+      "Tailwind CSS",
+      "Bootstrap 5",
+      "Shadcn UI",
+      "Chakra UI",
+    ],
+  },
+  {
+    id: 3,
+    label: "Backend",
+    icon: "⚙",
+    skills: ["Node JS", "Express JS", "Firebase", "FastAPI", "Flask", "REST APIs"],
+  },
+  {
+    id: 4,
+    label: "Mobile",
+    icon: "◻",
+    skills: ["React Native"],
+  },
+  {
+    id: 5,
+    label: "Databases",
+    icon: "▣",
+    skills: ["MongoDB", "Firestore", "Supabase"],
+  },
+  {
+    id: 6,
+    label: "AI / ML",
+    icon: "◎",
+    skills: [
+      "PyTorch",
+      "YOLOv5",
+      "ResNet-50",
+      "XGBoost",
+      "Generative AI",
+      "AssemblyAI",
+      "IBM Granite",
+    ],
+  },
+  {
+    id: 7,
+    label: "Tools & DevOps",
+    icon: "⬡",
+    skills: ["Git", "GitHub", "Socket.IO", "JWT"],
+  },
+  {
+    id: 8,
+    label: "State Management",
+    icon: "△",
+    skills: ["Context API", "React Router", "Redux (basics)"],
+  },
+];

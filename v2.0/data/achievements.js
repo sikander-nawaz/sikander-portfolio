@@ -1,0 +1,105 @@
+export const achievements = [
+  {
+    id: 1,
+    org: "Harvard University",
+    orgShort: "HARVARD",
+    title: "CS50x Puzzle Day — 1st Place (3× Winner)",
+    description:
+      "Solved all 9/9 complex puzzles in 2024, 2025 & 2026, winning first place three consecutive years with my team.",
+    badge: "2024 · 2025 · 2026",
+    links: [
+      { label: "2024 Cert", href: "#" },
+      { label: "2025 Cert", href: "#" },
+      { label: "2026 Cert", href: "#" },
+    ],
+    featured: true,
+    color: "cyan",
+  },
+  {
+    id: 2,
+    org: "Stanford University",
+    orgShort: "STANFORD",
+    title: "Section Leader — Code in Place",
+    description:
+      "Selected twice (2024 & 2026) to teach Python to international students across the USA, UK, Canada, Russia, India, Germany, and more.",
+    badge: "2024 · 2026",
+    links: [{ label: "View", href: "#" }],
+    featured: true,
+    color: "blue",
+  },
+  {
+    id: 3,
+    org: "MIT",
+    orgShort: "MIT",
+    title: "M(IT)² Coding Contest",
+    description:
+      "Secured 85th rank globally in MIT's prestigious competitive programming contest.",
+    badge: "Rank #85 Globally",
+    links: [{ label: "Link", href: "#" }],
+    featured: false,
+    color: "purple",
+  },
+  {
+    id: 4,
+    org: "UC Berkeley",
+    orgShort: "CALICO",
+    title: "CALICO Coding Competition",
+    description:
+      "Participated and secured 446th rank globally in the CALICO coding competition.",
+    badge: "Rank #446 Globally",
+    links: [{ label: "Link", href: "#" }],
+    featured: false,
+    color: "cyan",
+  },
+  {
+    id: 5,
+    org: "Advent of Code",
+    orgShort: "AOC",
+    title: "Pakistan Leaderboard Top 10",
+    description:
+      "7th rank in 2024 (solved all 25 days) and 4th rank in 2025 on the Pakistan leaderboard.",
+    badge: "#7 (2024) · #4 (2025)",
+    links: [
+      { label: "2024", href: "#" },
+      { label: "2025", href: "#" },
+    ],
+    featured: false,
+    color: "blue",
+  },
+  {
+    id: 6,
+    org: "Meta",
+    orgShort: "META",
+    title: "Meta Hacker Cup 2024",
+    description:
+      "Participated in Meta's global Hacker Cup working on complex algorithmic challenges.",
+    badge: "2024",
+    links: [{ label: "Link", href: "#" }],
+    featured: false,
+    color: "cyan",
+  },
+  {
+    id: 7,
+    org: "LeetCode",
+    orgShort: "LEETCODE",
+    title: "220+ DSA Problems Solved",
+    description:
+      "Consistently solving data structures & algorithms problems, demonstrating strong problem-solving fundamentals.",
+    badge: "Active · 220+",
+    links: [{ label: "Profile", href: "#" }],
+    featured: false,
+    color: "purple",
+  },
+  {
+    id: 8,
+    org: "Guest Speaker",
+    orgShort: "SPEAKER",
+    title: "University Webinars — BNU & BZU",
+    description:
+      "Delivered webinars at Beaconhouse National University (Meta Hacker Cup) and Bahauddin Zakariya University (Stanford Code in Place & UC CALICO).",
+    badge: "Public Speaker",
+    links: [],
+    featured: false,
+    color: "blue",
+  },
+];
