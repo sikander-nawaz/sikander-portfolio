@@ -32,7 +32,10 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 h-[72px] flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="font-syne text-xl font-bold text-white tracking-tight">
+        <Link
+          href="/"
+          className="font-syne text-xl font-bold text-white tracking-tight"
+        >
           Sikander
           <span className="gradient-text-gold">.</span>
         </Link>
@@ -50,8 +53,12 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <a href="mailto:sikandernawaz295@gmail.com" className="btn-primary text-sm py-2.5 px-5">
-            Hire Me
+          <a
+            href="https://drive.google.com/file/d/1kMHb-Wed3UiIodtD7BwHFCtgsGlyQUud"
+            target="_blank"
+            className="btn-primary text-sm py-2.5 px-5"
+          >
+            Resume
           </a>
         </div>
 
@@ -93,7 +100,10 @@ export default function Navbar() {
                 </motion.li>
               ))}
               <li>
-                <a href="mailto:sikandernawaz295@gmail.com" className="btn-primary text-sm py-2.5 px-5 inline-flex">
+                <a
+                  href="mailto:sikandernawaz295@gmail.com"
+                  className="btn-primary text-sm py-2.5 px-5 inline-flex"
+                >
                   Hire Me
                 </a>
               </li>

@@ -28,7 +28,11 @@ export default function Achievements() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: i * 0.06, ease: [0.25, 0.4, 0.25, 1] }}
+              transition={{
+                duration: 0.5,
+                delay: i * 0.06,
+                ease: [0.25, 0.4, 0.25, 1],
+              }}
               className="glass-card glow-border rounded-xl p-6 flex flex-col gap-3"
             >
               {/* Org badge */}
@@ -62,7 +66,7 @@ export default function Achievements() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-xs font-medium text-[#C8A257] hover:text-[#E2C792] transition-colors"
+                      className="flex items-center gap-1 text-xs font-medium text-[#C8A257] hover:text-[#E2C792] transition-colors cursor-pointer relative z-10"
                     >
                       {link.label}
                       <ExternalLink size={10} />

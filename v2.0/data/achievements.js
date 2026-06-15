@@ -8,9 +8,18 @@ export const achievements = [
       "Solved all 9/9 complex puzzles in 2024, 2025 & 2026, winning first place three consecutive years with my team.",
     badge: "2024 · 2025 · 2026",
     links: [
-      { label: "2024 Cert", href: "#" },
-      { label: "2025 Cert", href: "#" },
-      { label: "2026 Cert", href: "#" },
+      {
+        label: "2024 Cert",
+        href: "https://certificates.cs50.io/44b1da76-9cae-4f77-856b-3bcfef0fe738",
+      },
+      {
+        label: "2025 Cert",
+        href: "https://certificates.cs50.io/ae52868d-7296-482b-9b3f-db296010213c",
+      },
+      {
+        label: "2026 Cert",
+        href: "https://certificates.cs50.io/1072f7ab-fcd5-4761-b5e2-d5fb6a085e5f",
+      },
     ],
     featured: true,
     color: "cyan",
@@ -23,7 +32,12 @@ export const achievements = [
     description:
       "Selected twice (2024 & 2026) to teach Python to international students across the USA, UK, Canada, Russia, India, Germany, and more.",
     badge: "2024 · 2026",
-    links: [{ label: "View", href: "#" }],
+    links: [
+      {
+        label: "View",
+        href: "https://www.linkedin.com/feed/update/urn:li:activity:7223990886295064576/",
+      },
+    ],
     featured: true,
     color: "blue",
   },
@@ -35,7 +49,12 @@ export const achievements = [
     description:
       "Secured 85th rank globally in MIT's prestigious competitive programming contest.",
     badge: "Rank #85 Globally",
-    links: [{ label: "Link", href: "#" }],
+    links: [
+      {
+        label: "Link",
+        href: "https://www.linkedin.com/feed/update/urn:li:activity:7300904748466003971/",
+      },
+    ],
     featured: false,
     color: "purple",
   },
@@ -47,7 +66,12 @@ export const achievements = [
     description:
       "Participated and secured 446th rank globally in the CALICO coding competition.",
     badge: "Rank #446 Globally",
-    links: [{ label: "Link", href: "#" }],
+    links: [
+      {
+        label: "Link",
+        href: "https://www.linkedin.com/feed/update/urn:li:activity:7276598017439232000/",
+      },
+    ],
     featured: false,
     color: "cyan",
   },
@@ -60,7 +84,10 @@ export const achievements = [
       "7th rank in 2024 (solved all 25 days) and 4th rank in 2025 on the Pakistan leaderboard.",
     badge: "#7 (2024) · #4 (2025)",
     links: [
-      { label: "2024", href: "#" },
+      {
+        label: "2024",
+        href: "https://www.linkedin.com/feed/update/urn:li:activity:7278453702531633152/",
+      },
       { label: "2025", href: "#" },
     ],
     featured: false,
@@ -74,7 +101,12 @@ export const achievements = [
     description:
       "Participated in Meta's global Hacker Cup working on complex algorithmic challenges.",
     badge: "2024",
-    links: [{ label: "Link", href: "#" }],
+    links: [
+      {
+        label: "Link",
+        href: "https://www.linkedin.com/feed/update/urn:li:activity:7240238291101347842/",
+      },
+    ],
     featured: false,
     color: "cyan",
   },
@@ -86,7 +118,7 @@ export const achievements = [
     description:
       "Consistently solving data structures & algorithms problems, demonstrating strong problem-solving fundamentals.",
     badge: "Active · 220+",
-    links: [{ label: "Profile", href: "#" }],
+    links: [{ label: "Profile", href: "https://leetcode.com/u/sikander_09/" }],
     featured: false,
     color: "purple",
   },
@@ -98,7 +130,16 @@ export const achievements = [
     description:
       "Delivered webinars at Beaconhouse National University (Meta Hacker Cup) and Bahauddin Zakariya University (Stanford Code in Place & UC CALICO).",
     badge: "Public Speaker",
-    links: [],
+    links: [
+      {
+        label: "BZU",
+        href: "https://www.linkedin.com/feed/update/urn:li:activity:7304841239021944832/",
+      },
+      {
+        label: "BNU",
+        href: "https://www.linkedin.com/feed/update/urn:li:activity:7240238291101347842/",
+      },
+    ],
     featured: false,
     color: "blue",
   },

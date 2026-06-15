@@ -4,18 +4,6 @@ import { motion } from "framer-motion";
 
 const roles = [
   {
-    id: 1,
-    period: "Apr 2026 – Present  ·  Apr – Jun 2024",
-    role: "Section Leader Mentor",
-    org: "Stanford University — Code in Place",
-    location: "Remote · California, USA",
-    points: [
-      "Selected twice to teach Python to international students in groups of 10–15.",
-      "Provided one-on-one student support and delivered TeachNow sessions.",
-      "Helped students from the USA, UK, Canada, Russia, India, Bangladesh, Germany, Brazil, and more.",
-    ],
-  },
-  {
     id: 2,
     period: "Feb 2024 – Present",
     role: "Trainer & Moderator",
@@ -29,14 +17,28 @@ const roles = [
     ],
   },
   {
+    id: 1,
+    period: "Apr 2026 – June 2026  ·  Apr – Jun 2024",
+    role: "Section Leader Mentor",
+    org: "Stanford University — Code in Place",
+    location: "Remote · California, USA",
+    points: [
+      "Selected twice to teach Python to international students in groups of 10–15.",
+      "Provided one-on-one student support and delivered TeachNow sessions.",
+      "Helped students from the USA, UK, Canada, Russia, India, Bangladesh, Germany, Brazil, and more.",
+    ],
+  },
+
+  {
     id: 3,
-    period: "Jan 2026 – Feb 2026",
+    period: "Jan 2026 – Jun 2026",
     role: "Instructor",
     org: "Pak Angels",
-    location: "Remote · Pakistan",
+    location: "Remote · USA",
     points: [
-      "Delivered a two-hour Basic Python workshop covering variables, data types, type casting, conditionals, iterations, functions, and data structures.",
-      "Ran hands-on DSA sessions using LeetCode as a practical learning platform.",
+      "Delivered sessions on Generative AI, fostering student understanding of modern AI concepts and applications.",
+      "Mentored teams during Hackathon Cohort 2, providing technical guidance and project development support.",
+      "Evaluated and judged submissions in Hackathon Cohort 3, assessing innovation, feasibility, and technical execution.",
     ],
   },
 ];
@@ -68,7 +70,11 @@ export default function Volunteer() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.25, 0.4, 0.25, 1] }}
+              transition={{
+                duration: 0.5,
+                delay: idx * 0.1,
+                ease: [0.25, 0.4, 0.25, 1],
+              }}
               className={`relative mb-12 ${idx === roles.length - 1 ? "mb-0" : ""}`}
             >
               {/* Dot */}
